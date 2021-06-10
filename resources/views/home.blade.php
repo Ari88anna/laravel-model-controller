@@ -8,7 +8,15 @@
 </head>
 <body>
 
-    <h1>ciao sono la home</h1>
+    <h1>Film da non perdere</h1>
+
+    <div>
+        <ul>
+            @foreach ( $movies as $movie)
+            <li>{{ $movie->title }}</li>
+            @endforeach
+        </ul>
+    </div>
     
 </body>
 </html>
