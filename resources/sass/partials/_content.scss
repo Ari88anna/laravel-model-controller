@@ -1,0 +1,42 @@
+.header-title {
+    background-color: #0f171e;
+    text-align: center;
+    padding: 30px;
+    
+    h1 {
+        color: #8c7e5c;
+    }
+}
+
+.movie-collection {
+    background-color: #181c1f;
+    padding: 30px 0;
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+            width: calc(100% / 2 - 30px);
+            border: 1px solid #8c7e5c;
+            border-radius: 20px;
+            margin: 20px 0;
+            padding: 20px 10px;
+
+            a {
+                color: wheat;
+                h3 {
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 25px;
+                }
+            }
+
+            .movie-details {
+                padding: 15px 0;
+                color: #7c8389;
+            }
+        }
+    }
+}

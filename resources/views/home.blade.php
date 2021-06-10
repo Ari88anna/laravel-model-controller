@@ -1,22 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('layouts.app')
 
-    <h1>Film da non perdere</h1>
+@section('main_content')
 
-    <div>
-        <ul>
-            @foreach ( $movies as $movie)
-            <li>{{ $movie->title }}</li>
-            @endforeach
-        </ul>
+    <div class="header-title">
+
+        <h1>Movies</h1>
+
     </div>
+
+    <div class="movie-collection">
+
+        <div class="container">
+
+            <ul class="menu">
+
+                @foreach ( $movies as $movie)
     
-</body>
-</html>
+                    <li>
+                        <a href="">
+                            <h3>{{ $movie->title }}</h3>                            
+                        </a>
+
+                        <div class="movie-details">
+
+                            <div>Original title : {{ $movie->original_title }}</div>
+
+                            <div>Release date : {{ $movie->date }}</div>
+
+                            <div>Nationality: {{ $movie->nationality }}</div>
+
+                            <div>Vote : {{ $movie->vote }}</div>
+
+                        </div>
+                    </li>
+    
+                @endforeach
+    
+            </ul>
+
+        </div>
+
+    </div>
+
+@endsection
